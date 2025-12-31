@@ -1,0 +1,9 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  #big-heart {
+    font-size: 5rem; /* smaller than desktop default probably */
+  }
+  .love-meter {
+    width: 80%;
+  }
+}

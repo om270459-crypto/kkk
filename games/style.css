@@ -1,0 +1,21 @@
+
+/* ستايل الزرار */
+button{
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  background-color: #fff; /* خلفية داكنة */
+  border: 2px solid #880000; /* حدود أساسية داكنة */
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #880000; /* توهج خفيف افتراضي */
+}
+
+/* تأثير الهوفر */
+button:hover {
+  border-color: #ff0000; /* لون الحدود الأحمر الفاقع */
+  box-shadow: 0 0 15px #ff0000, 0 0 30px #ff4444; /* توهج قوي */
+  background-color: #fff; /* تغيير طفيف للخلفية */
+}

@@ -1,0 +1,21 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  .orbit-system {
+    width: 280px;
+    height: 280px;
+  }
+  .orbit-path {
+    width: 200px;
+    height: 200px;
+  }
+  .core {
+    font-size: 2rem;
+  }
+  .orbiter {
+    font-size: 1.2rem;
+  }
+  #orbit-action-btn {
+    width: 80%;
+    margin-top: 15px;
+  }
+}

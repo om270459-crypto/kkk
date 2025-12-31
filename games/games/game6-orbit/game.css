@@ -1,0 +1,64 @@
+.orbit-system {
+  width: 250px;
+  height: 250px;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.core {
+  font-size: 3rem;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 10px var(--primary-color));
+  z-index: 5;
+}
+
+.orbit-path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate 3s linear infinite;
+}
+
+.orbiter {
+  position: absolute;
+  top: -15px; /* Half of height to center on line */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.target-bracket {
+  position: absolute;
+  width: 4px;
+  height: 10px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.target-bracket.top {
+  top: -5px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

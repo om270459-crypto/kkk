@@ -1,0 +1,19 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  .wheel-outer {
+    width: 250px;
+    height: 250px;
+  }
+  .wheel {
+    width: 250px;
+    height: 250px;
+  }
+  .wheel-section i {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  #spin-btn {
+    width: 80%;
+    margin-top: 20px;
+  }
+}

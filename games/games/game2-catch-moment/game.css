@@ -1,0 +1,76 @@
+.track-wrapper {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  margin: 3rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.track-container {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3)
+  );
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.target-zone {
+  position: absolute;
+  left: 70%;
+  top: 0;
+  height: 100%;
+  width: 15%; /* Target width */
+  background: rgba(74, 222, 128, 0.2);
+  border-left: 2px solid #4ade80;
+  border-right: 2px solid #4ade80;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
+  animation: targetPulse 1.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+.moving-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 10px var(--primary-color));
+  z-index: 2;
+  will-change: left; /* Hints browser for optimization */
+}
+
+/* Success Effect */
+.moving-bar.caught {
+  filter: drop-shadow(0 0 20px white);
+  transform: translate(-50%, -50%) scale(1.5);
+  transition: transform 0.5s var(--ease-elastic);
+  color: #fff;
+}
+
+@keyframes targetPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    background: rgba(74, 222, 128, 0.2);
+  }
+  50% {
+    opacity: 0.8;
+    background: rgba(74, 222, 128, 0.4);
+  }
+}

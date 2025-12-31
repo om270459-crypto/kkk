@@ -1,0 +1,13 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  .maze-grid {
+    width: 300px;
+    height: 300px;
+  }
+  .cell {
+    /* Auto adjust if grid layout */
+  }
+  .controls-hint {
+    font-size: 0.9rem;
+  }
+}
