@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:wght@100..900&display=swap");
+/*=============== GOOGLE FONTS ===============*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header h1 {
+    padding-top: 20px;
+    font-size: 40px;
+    margin-left: 8px;
+    font-family: galada;
+}
+header .links ul {
+    flex-wrap: wrap;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .links ul li {
+    list-style: none;
+    margin-right: 1rem  ;
+    margin-left: 1rem;
+}
+header .links ul li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-family: galada;
+}
+header .links ul {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  row-gap: 2rem;
+}
+header .links ul li a:hover {
+    text-decoration: underline;
+}

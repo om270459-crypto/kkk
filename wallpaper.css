@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:wght@100..900&display=swap");
+/*=============== GOOGLE FONTS ===============*/
+
+body {
+  background-image: url(assets/img/img-bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 98%;
+  height: 95vh;
+  font-family: galada;
+  color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+
+.snow-ground img {
+  pointer-events: none;
+  position: absolute;
+  max-width: initial;
+  display: block;
+  height: auto;
+  bottom: 0;
+}
+
+.one,
+.three {
+  width: 1200px;
+  left: 0;
+}
+.two,
+.four {
+  width: 1000px;
+  bottom: 0;
+  right: 0;
+}
+header h1,
+header .links ul li a {
+    font-family: galada;
+}

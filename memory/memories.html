@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- memory style link -->
+    <link rel="stylesheet" href="memoreis.css" />
+    <link rel="stylesheet" href="../wallpaper.css" />
+    <link rel="stylesheet" href="../games/style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <!-- end of memory style link -->
+    <!-- font-awosome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end of font-awosome link -->
+    <!-- page title -->
+    <title>memories page</title>
+    <!-- end of page title -->
+  </head>
+  <body>
+    <div id="app">
+    <!-- header -->
+    <header>
+      <h1 class="title">Happy New Year Maryoumty</h1>
+      <!-- links -->
+      <div class="links">
+        <ul>
+          <li>
+            <a href="../index.html">
+              <i class="fa-solid fa-house-chimney"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../countdwon/countdown.html">
+              <i class="fa-solid fa-stopwatch-20"></i>
+              countdown
+            </a>
+          </li>
+          <li>
+            <a href="../games/index.html">
+              <i class="fa-solid fa-gamepad"></i>
+              Games
+            </a>
+          </li>
+          <li>
+            <a href="../experience/index.html">
+              <i class="fa-brands fa-signal-messenger"></i>
+              messages
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-brain"></i>
+              Reload
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end of links -->
+    </header>
+    <!-- end of header -->
+    <!-- snow ground -->
+    <div class="snow-ground">
+      <div class="firist">
+        <img class="one" src="../assets/img/img-11.svg" alt="" />
+        <img class="two" src="../assets/img/img-14.svg" alt="" />
+      </div>
+      <div class="second">
+        <img class="three" src="../assets/img/img-15.svg" alt="" />
+        <img class="four" src="../assets/img/img-16.svg" alt="" />
+      </div>
+    </div>
+    <!-- end of snow ground -->
+    <!-- snowfall -->
+    <canvas id="snow"></canvas>
+    <script src="../snow.js"></script>
+    <!-- end of snowfall -->
+    <!-- massage box -->
+    <div class="christmas-box">
+      <!-- end of massage box -->
+      <!-- Snow -->
+      <canvas class="snow"></canvas>
+      <canvas class="spark"></canvas>
+      <!-- end of Snow -->
+      <!-- Tree -->
+      <div class="tree">
+        <div class="star">★</div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- end of Tree -->
+      <!-- Content -->
+      <h2>oops! We don't have photo memories</h2>
+      <p>I wish We Have in Future</p>
+      <button type="button" onclick="window.Router ? window.Router.navigate('../index.html') : window.location.href='../index.html'">
+        <i class="fa-solid fa-house-chimney"></i>
+        To Home page
+      </button>
+    </div>
+    <!-- end of content -->
+    <script src="memoreis.js"></script>
+    <script src="../assets/js/router.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+  .christmas-box {
+    width: 90%;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .christmas-box {
+    width: 80%;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .christmas-box{
+    left: 700px;
+    top: 350px;
+  }
+}

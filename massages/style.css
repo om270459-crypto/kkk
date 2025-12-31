@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:wght@100..900&display=swap");
+/*=============== GOOGLE FONTS ===============*/
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: galada,"Lato", sans-serif;
+  background-color: #004d55; /* Deep Teal */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Hero Container - 16:9 Aspect Ratio constraints layout basically centered */
+.hero-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Card */
+.holiday-card {
+  position: relative;
+  background-color: #8b0000; /* Dark festive red */
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
+  max-height: 700px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Decorative Dots Pattern */
+.decorative-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    #ffd700 15%,
+    transparent 16%
+  ); /* Gold dots */
+  background-size: 60px 60px; /* Spacing */
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navigation */
+.card-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.nav-icon {
+  color: #fff8dc; /* Warm cream */
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.nav-icon:hover {
+  opacity: 1;
+}
+
+/* Card Content Grid */
+.card-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Left Text Side */
+.text-content {
+  flex: 1;
+  padding-right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: #fff8dc; /* Warm cream */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p {
+  color: #fff8dc;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 400px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #fff8dc; /* Warm cream */
+  color: #8b0000; /* Dark red text */
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Right Illustration Side */
+.illustration-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.illustration-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* Drop shadow for the illustration to pop a bit on the flat card */
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .holiday-card {
+    padding: 30px;
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .card-content {
+    flex-direction: column-reverse; /* Image on top? Or text on top? Usually Image top on mobile or bottom. Let's stack text top. */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text-content {
+    padding-right: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .illustration-content {
+    height: 300px;
+    width: 100%;
+  }
+}
+.icon {
+  font-size: 500px;
+  color: #004d55;
+  z-index: 11111;
+}
+/* Navigation Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff8dc;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.3s, transform 0.2s;
+  padding: 10px;
+}
+.nav-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.nav-arrow.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.prev-arrow {
+  left: 10px;
+}
+.next-arrow {
+  right: 10px;
+}
+
+/* Animations */
+.text-content {
+  transition: opacity 0.4s ease;
+}
+.content-hidden {
+  display: none !important;
+  opacity: 0;
+}
+.card-content .text-content p {
+  text-transform: capitalize;
+  font-size: 20px;
+}

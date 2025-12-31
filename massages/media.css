@@ -1,0 +1,53 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  .holiday-card {
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+  .card-content {
+    flex-direction: column;
+    padding-bottom: 60px; /* Space for nav arrows if needed or just bottom spacing */
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .text-content p {
+    font-size: 0.9rem;
+  }
+  .nav-arrow {
+    padding: 20px; /* larger touch target */
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  .prev-arrow {
+    left: 5px;
+  }
+  .next-arrow {
+    right: 5px;
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .holiday-card {
+    width: 95%;
+    padding: 30px;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+}
