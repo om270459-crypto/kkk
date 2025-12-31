@@ -1,0 +1,6 @@
+{
+  "name": "03_Light_Grid",
+  "version": "6.0",
+  "files": ["index.html", "style.css", "script.js"],
+  "libraries": ["gsap", "vanta.net", "animejs", "howler"]
+}

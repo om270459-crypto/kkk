@@ -1,0 +1,6 @@
+{
+  "name": "01_to_02_Loading",
+  "version": "6.0",
+  "files": ["index.html", "style.css", "script.js"],
+  "libraries": ["gsap", "tsparticles", "fontawesome"]
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- memory style link -->
+    <link rel="stylesheet" href="../memory/memoreis.css" />
+    <link rel="stylesheet" href="wallpaper.css" />
+    <link rel="stylesheet" href="countdown.css" />
+    <link rel="stylesheet" href="media.css" />
+    <!-- end of memory style link -->
+    <!-- font-awosome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end of font-awosome link -->
+    <!-- page title -->
+    <title>memories page</title>
+    <!-- end of page title -->
+  </head>
+  <body>
+    <!-- APP CONTAINER: Only this div changes during SPA navigation -->
+    <div id="app">
+    <!-- header -->
+    <header>
+      <h1 class="title">We Stayed Together For :</h1>
+      <!-- links -->
+      <div class="links">
+        <ul>
+          <li>
+            <a href="../index.html">
+              <i class="fa-solid fa-house-chimney"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../countdwon/countdown.html">
+              <i class="fa-solid fa-stopwatch-20"></i>
+              countdown
+            </a>
+          </li>
+          <li>
+            <a href="../games/index.html">
+              <i class="fa-solid fa-gamepad"></i>
+              Games
+            </a>
+          </li>
+          <li>
+            <a href="../experience/index.html">
+              <i class="fa-brands fa-signal-messenger"></i>
+              messages
+            </a>
+          </li>
+          <li>
+            <a href="../memory/memories.html">
+              <i class="fa-solid fa-brain"></i>
+              memories
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end of links -->
+    </header>
+    <!-- end of header -->
+    <!-- snow man -->
+    <div class="snow-man">
+      <img
+        src="../assets/img/Gemini_Generated_Image_iqhug5iqhug5iqhu-removebg-preview.png"
+        alt=""
+      />
+    </div>
+    <!-- end of snow man -->
+    <!-- snow ground -->
+    <div class="snow-ground">
+      <div class="firist">
+        <img class="one" src="../assets/img/img-11.svg" alt="" />
+        <img class="two" src="../assets/img/img-14.svg" alt="" />
+      </div>
+      <div class="second">
+        <img class="three" src="../assets/img/img-15.svg" alt="" />
+        <img class="four" src="../assets/img/img-16.svg" alt="" />
+      </div>
+    </div>
+    <!-- end of snow ground -->
+    <!-- snowfall -->
+    <canvas id="snow"></canvas>
+    <script src="../snow.js"></script>
+    <!-- end of snowfall -->
+    <script src="countdown.js"></script>
+    <script src="../assets/js/router.js"></script>
+    </div><!-- END #app -->
+  </body>
+</html>

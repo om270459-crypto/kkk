@@ -1,0 +1,6 @@
+{
+  "name": "04_Final_Page",
+  "version": "6.0",
+  "files": ["index.html", "style.css", "script.js"],
+  "libraries": ["gsap", "howler"]
+}

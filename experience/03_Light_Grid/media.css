@@ -1,0 +1,33 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  #final-message {
+    font-size: 2rem;
+  }
+  .glass-panel {
+    width: 90%;
+    padding: 20px;
+  }
+  #final-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  #final-message {
+    font-size: 3rem;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+}

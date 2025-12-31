@@ -1,0 +1,6 @@
+{
+  "name": "02_Floating_Lanterns",
+  "version": "6.0",
+  "files": ["index.html", "style.css", "script.js"],
+  "libraries": ["gsap", "vanta.fog", "tsparticles", "animejs", "howler"]
+}

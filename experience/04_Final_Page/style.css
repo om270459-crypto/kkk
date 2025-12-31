@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Montserrat:wght@100..900&display=swap");
+/*=============== GOOGLE FONTS ===============*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+  cursor: default;
+  pointer-events: none;
+}
+
+#final-btn {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 40px;
+  pointer-events: all;
+}
+#final-btn span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  pointer-events: all;
+}
+#final-btn .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 400px;
+  height: 200px;
+  background: wheat;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#final-btn .liquid::after,
+#final-btn .liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* transform: translate(-50%, -75%); */
+  background: wheat;
+}
+#final-btn .liquid::before {
+  border-radius: 45%;
+  background: wheat;
+  animation: animate 5s linear infinite;
+}
+#final-btn .liquid::after {
+  border-radius: 40%;
+  background: wheat;
+  animation: animate 10s linear infinite;
+}
+/* #final-btn:hover .liquid {
+  top: -120px;
+} */
+/* @keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+} */
+
+body {
+  background-color: #8963ff;
+  font-family: galada;
+}
+
+img {
+  position: absolute;
+  bottom: -200px;
+}
+
+.one {
+  left: 0;
+}
+.two {
+  right: 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+h1 {
+  color: white;
+  margin-left: 18px;
+  font-family: galada;
+}
+
+.tree img {
+  width: 2000px;
+  position: absolute;
+  bottom: -50px;
+  left: -300px;
+}
+.tree-two img {
+  width: 2000px;
+  position: absolute;
+  bottom: -50px;
+  right: -300px;
+}
+.cloud-one,
+.cloud-two {
+  position: absolute;
+}
+.cloud-one {
+  top: 0;
+  right: 600px;
+  animation-name: cloud-one;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.cloud-two {
+  top: 0;
+  right: 900px;
+  animation-name: cloud-two;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes cloud-one {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes cloud-two {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.firist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+}

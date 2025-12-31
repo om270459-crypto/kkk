@@ -1,0 +1,250 @@
+/* Glassmorphism Flip Clock Styles */
+:root {
+  --glass-surface: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-glow: rgba(180, 230, 255, 0.35);
+  --digit-text: #eaf6ff;
+  --digit-glow: rgba(160, 215, 255, 0.6);
+  --depth-shadow: rgba(0, 40, 90, 0.45);
+  --reflection-highlight: rgba(255, 255, 255, 0.35);
+  /* Size */
+  --countdown-width: 130px;
+  --countdown-height: 170px;
+  --flip-speed: 0.6s;
+  --font-family-digits: "Montserrat", sans-serif;
+}
+
+.countdown-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center; /* Align colons vertically */
+  gap: 15px; /* Reduced gap to fit content */
+  z-index: 9999;
+  pointer-events: none;
+  perspective: 1000px;
+}
+
+@media (max-width: 1200px) {
+  .countdown-wrapper {
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown-wrapper {
+    gap: 5px;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(0.4); /* Much smaller scale to fit 5 items */
+  }
+}
+
+/* Colons Separator */
+.countdown-separator {
+  font-family: var(--font-family-digits);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--digit-text);
+  text-shadow: 0 0 20px var(--digit-glow);
+  margin-top: -30px; /* Align with digits, offsetting label height */
+  padding: 0 5px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 20px var(--digit-glow);
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 10px var(--digit-glow);
+  }
+}
+
+.countdown-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.countdown-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--digit-text);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px var(--digit-glow);
+  opacity: 0.9;
+}
+
+/* The Card Container */
+.countdown-card {
+  position: relative;
+  width: var(--countdown-width);
+  height: var(--countdown-height);
+  perspective: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px var(--depth-shadow);
+}
+
+/* Common Face Styles */
+.top,
+.bottom,
+.flip-top,
+.flip-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background-color: var(--glass-surface);
+  color: var(--digit-text);
+  font-family: var(--font-family-digits);
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: center;
+
+  /* Glass Effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+
+  text-shadow: 0 0 20px var(--digit-glow);
+
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Top Half Styles */
+.top,
+.flip-top {
+  top: 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: flex-end;
+  transform-origin: bottom;
+  z-index: 1;
+}
+
+/* Bottom Half Styles */
+.bottom,
+.flip-bottom {
+  bottom: 0;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: flex-start;
+  transform-origin: top;
+  z-index: 0;
+}
+
+/* Align text vertically */
+.top span,
+.flip-top span {
+  transform: translateY(50%);
+  display: block;
+}
+
+.bottom span,
+.flip-bottom span {
+  transform: translateY(-50%);
+  display: block;
+}
+
+/* Reflections overlay */
+.top::after,
+.flip-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 20%,
+    var(--reflection-highlight) 50%,
+    transparent 80%
+  );
+  opacity: 0.3;
+  animation: shimmer 5s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-50%) translateY(-20%);
+  }
+  50% {
+    transform: translateX(20%) translateY(20%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-20%);
+  }
+}
+
+/* Apply inset glow to faces directly */
+.top,
+.bottom,
+.flip-top,
+.flip-bottom {
+  box-shadow: inset 0 0 20px var(--glass-glow);
+}
+
+/* Backfaces for flipping */
+.flip-top {
+  z-index: 2;
+  backface-visibility: hidden;
+}
+
+.flip-bottom {
+  z-index: 2;
+  backface-visibility: hidden;
+  transform: rotateX(90deg); /* Start hidden */
+}
+
+/* Flip Animations */
+.flip-down-top {
+  animation: flipDownTop var(--flip-speed) cubic-bezier(0.45, 0.05, 0.55, 0.95)
+    forwards;
+}
+
+.flip-down-bottom {
+  animation: flipDownBottom var(--flip-speed)
+    cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+@keyframes flipDownTop {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes flipDownBottom {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,47 @@
+/* Mobile phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  .tree img,
+  .tree-two img {
+    width: 200px; /* Scale down giant trees */
+    bottom: 0;
+  }
+  .tree img {
+    left: -50px;
+  }
+  .tree-two img {
+    right: -50px;
+  }
+  #final-btn {
+    width: 90%;
+    padding: 15px;
+  }
+  #final-btn span {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .tree img,
+  .tree-two img {
+    width: 400px;
+  }
+}
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+}

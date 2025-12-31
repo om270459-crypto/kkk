@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Year Experience</title>
+  </head>
+  <body>
+    <div id="app">
+    <p>Redirecting to the experience...</p>
+    <script src="../../assets/js/router.js"></script>
+    <script>
+      // Redirect logic compatible with Router
+      const target = "01_Cosmic_Fireworks/index.html";
+      if (window.Router) {
+        window.Router.navigate(target);
+      } else {
+        window.location.href = target;
+      }
+    </script>
+      }
+    </script>
+    </div>
+  </body>
+</html>

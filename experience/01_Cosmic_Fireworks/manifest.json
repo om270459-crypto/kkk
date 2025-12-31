@@ -1,0 +1,7 @@
+{
+  "name": "01_Cosmic_Fireworks",
+  "version": "6.0",
+  "description": "Enhanced Cosmic Fireworks with Vanta.js Clouds",
+  "files": ["index.html", "style.css", "script.js", "README.md"],
+  "libraries": ["gsap", "tsparticles", "confetti", "howler", "animejs", "vanta.clouds"]
+}
